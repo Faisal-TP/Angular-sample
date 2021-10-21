@@ -1,0 +1,11 @@
+.txt-success {
+    color: green;
+}
+
+.txt-danger {
+    color: red;
+}
+
+.txt-special {
+    font-style: italic;
+}

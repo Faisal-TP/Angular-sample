@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Tutorial';
+  //@input 
+  public name = "Calicut";
+
+  public Message = "";
 }

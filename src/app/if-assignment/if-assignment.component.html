@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <br>
+    <br>
+    <div class="container">
+        <button (click)="Home()" class="btn btn-info">Home</button>&nbsp;
+        <button (click)="About()" class="btn btn-info">About</button>&nbsp;
+        <button (click)="Gallery()" class="btn btn-info">Gallery</button>&nbsp;
+        <button (click)="Contact()" class="btn btn-info">Contact</button>&nbsp;
+        <br>
+        <br>
+        <!--content-->
+
+        <div class="row">
+            <div class="col-md-12">
+                <!--home-->
+                <div *ngIf="home" class="card">
+                    <div class="card-header">
+                        Home
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Welcome Baabte</h5>
+                        <p class="card-text">Baabtra, the best software training company in Calicut has proved its expertise by training and placing several hundreds of students both in MNC’s like UST Global, Infosys, Oracle etc and SME’s like Nucore Software Solutions, Sesame,
+                            IOSS, ULTS and many other companies mainly in Kozhikode, Cochin, Trivandrum and Bangalore.</p>
+                        <a href="#" class="btn btn-primary">Go More</a>
+                    </div>
+                </div>
+                <!--about-->
+                <div *ngIf="about" class="card">
+                    <div class="card-header">
+                        About
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">About Baabte</h5>
+                        <p class="card-text">Baabtra helps a software job seeker to get skilled in technologies like Php, Python, Java, Andriod, Angular 4 etc and to get placed in Software Companies. Baabtra, the best software training company in Calicut has proved its expertise
+                            by training and placing several hundreds of students both in MNC’s like UST Global, Infosys, Oracle etc and SME’s like Nucore Software Solutions, Sesame, IOSS, ULTS and many other companies mainly in Kozhikode, Cochin, Trivandrum
+                            and Bangalore</p>
+                        <a href="#" class="btn btn-primary">Go More</a>
+                    </div>
+                </div>
+                <!--Gallery-->
+                <div *ngIf="gallery" class="card">
+                    <div class="card-header">
+                        Gallery
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Our Gallery</h5>
+                        <div class="row">
+                            <div class="col-md-4"><img style="height: 150px;" class="img-thumbnail" src="assets/images/1.jpg" alt=""></div>
+                            <div class="col-md-4"><img style="height: 150px;" class="img-thumbnail" src="assets/images/2.jpg" alt=""></div>
+                            <div class="col-md-4"><img style="height: 150px;" class="img-thumbnail" src="assets/images/3.jpg" alt=""></div>
+                        </div>
+                        <br>
+                        <a href="#" class="btn btn-primary">Go More</a>
+                    </div>
+                </div>
+                <!--Contact-->
+                <div *ngIf="contact" class="card">
+                    <div class="card-header">
+                        Contact
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Your Message</h5>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Title</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Message</label>
+                                <textarea name="" id="" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>

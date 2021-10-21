@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--start ng if-->
+    <h2 *ngIf="true">Working If</h2>
+    <h2 *ngIf="displayname">Display Name</h2>
+
+    <button (click)="TestFun()">click</button>
+    <!-----------if elese block--------->
+    <h2 *ngIf="displayif; else elseBlock">Display if</h2>
+    <ng-template #elseBlock>
+        <h2>Display else</h2>
+    </ng-template>
+    <!-----------close if elese block--------->
+    <!--start if else single line-->
+    <div *ngIf="displayname; then thenBlockw; else elseBlockw"></div>
+    <ng-template #thenBlockw>
+        <h2>Then Block</h2>
+    </ng-template>
+    <ng-template #elseBlockw>
+        <h2>Else Block</h2>
+    </ng-template>
+    <!-- close if else single line-->
+    <!--close start ng if-->
+
+    <button (click)="Test();">Click</button>
+
+    <p *ngIf="testif">hiiiiiiiiiiii</p>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--start ng for-->
+    <ul *ngFor="let cols of colors">
+        <li>{{cols}}</li>
+    </ul>
+    <hr>
+    <ul *ngFor="let cols of colors;index as i">
+        <li>{{i}} {{cols}}</li>
+    </ul>
+
+    <hr>
+    <ul *ngFor="let cols of colors;first as l">
+        <!--first/last/odd/even-->
+        <li>{{l}} {{cols}}</li>
+    </ul>
+    <!--close ng for-->
+    <hr>
+
+    <table border="1">
+        <tr>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>CONTACT</th>
+        </tr>
+        <tr *ngFor="let student of students">
+            <td>{{student['name']}}</td>
+            <td>{{student['age']}}</td>
+            <td>{{student['contact']}}</td>
+        </tr>
+    </table>
+</body>
+
+</html>

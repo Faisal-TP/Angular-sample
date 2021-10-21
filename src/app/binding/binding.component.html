@@ -1,0 +1,52 @@
+<!-- <input [(ngModel)]="name" type="text" placeholder="Enter Color">
+<div [style.color]="name">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolore et quod ab nihil eos sunt reiciendis necessitatibus sequi maiores assumenda expedita qui libero, animi accusantium aliquid obcaecati quas dolorum!</p>
+</div>
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--start Angular Property binding-->
+    <input type="text" id="myId">
+    <input type="text" [id]="myId">
+    <input [disabled]="true" type="text">
+    <input [disabled]="myid" type="text">
+    <!--close Angular Property binding-->
+    <hr>
+    <!--class binding-->
+    <h1 class="txt-success">Heading1</h1>
+    <h1 [className]="'txt-success'">Heading2</h1>
+    <h1 [class.txt-success]=hasError>Heading3</h1>
+    <h1 [ngClass]="messageClass">Dynamic Class</h1>
+    <!--close class binding-->
+    <hr>
+    <!--style binding-->
+    <h1 [style.color]="'cyan'">Style Binding1</h1>
+    <h1 [style.color]="highlightcolor">Style Binding 2</h1>
+    <h1 [style.color]="hasError ? 'Blue' : 'orange'">Style Binding Conditional</h1>
+    <h1 [ngStyle]="titleStyle">Style multiple - object</h1>
+    <!--close style binding-->
+    <!--select-->
+    <!-- <select [(ngModel)]="item" name="item" id="test" (change)="change();">
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+    </select>
+    <div [ngSwitch]="color">
+        <div *ngSwitchCase="'Red'">You pick red color</div>
+        <div *ngSwitchCase="'Green'">You pick green color</div>
+        <div *ngSwitchCase="'Blue'">You pick blue color</div>
+        <div *ngSwitchDefault>You pick again</div>
+    </div> -->
+</body>
+
+</html>

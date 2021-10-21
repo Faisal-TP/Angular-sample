@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <br><br>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+
+                <mat-card class="example-card">
+                    <mat-card-content>
+                        <!--form-->
+                        <h4>REGISTER YOUR ACCOUNT</h4>
+                        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                            <div class="form-group">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Name</mat-label>
+                                    <input #refName matInput type="text" name="name" formControlName="name">
+                                </mat-form-field>
+                                <!-- <b>{{refName.className}}</b> -->
+                                <div *ngIf="userForm.controls['name'].errors&&(userForm.controls['name'].dirty || userForm.controls['name'].touched)">
+                                    <div *ngIf="userForm.controls['name'].hasError('required')">
+                                        <label style="color: red;">Please Enter Name</label>
+                                    </div>
+                                    <div *ngIf="userForm.controls['name'].hasError('minlength')">
+                                        <label style="color: red;">Minimum 4 Characters Required</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Address</mat-label>
+                                    <textarea required matInput name="address" formControlName="address"></textarea>
+                                </mat-form-field>
+
+                            </div>
+                            <div class="form-group">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Contact</mat-label>
+                                    <input required #refContact matInput type="text" name="contact" formControlName="contact">
+                                </mat-form-field>
+                                <div *ngIf="userForm.controls['contact'].hasError('pattern')">
+                                    <label style="color: red;">Minimum 10 Numbers Required</label>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Email</mat-label>
+                                    <input required matInput type="email" name="email" formControlName="email">
+                                </mat-form-field>
+
+                            </div>
+                            <button mat-raised-button [disabled]="!userForm.valid" color="primary" type="submit">Register</button>
+                            <!-- <button type="submit" [disabled]="!userForm.valid" mat-raised-button color="primary">Register</button> -->
+                        </form>
+                        <!--close form-->
+                    </mat-card-content>
+                </mat-card>
+
+                <!-- <button mat-raised-button color="warn">Warn</button> -->
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
